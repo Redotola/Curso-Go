@@ -32,7 +32,7 @@ const (
 
 func main() {
 
-	manejo_de_datos()
+	manejo_fmt()
 }
 
 func imprimir_datos(){
@@ -133,4 +133,34 @@ func manejo_de_datos(){
 	fmt.Println("Suma de cadenas: ", s+s)
 
 
+}
+
+func manejo_fmt(){
+	fmt.Println("Hola Mundo")
+	fmt.Println(quote.Go())
+
+	name := "Axl"
+	age := 22
+
+	fmt.Printf("Hola, me llamo %s y tengo %d años. \n", name, age)
+	
+	greeting := fmt.Sprintf("Hola, me llamo %s y tengo %d años. \n", name, age)
+	fmt.Println(greeting)
+
+	var name1, name2 string
+	var age1 int
+
+	fmt.Printf("Ingrese su nombre: ")
+	fmt.Scanln(&name1, &name2)
+	fmt.Printf("Ingrese su edad: ")
+	fmt.Scanln(&age1)
+
+    // Formateo con placeholder %s para strings y %d para enteros
+	fmt.Printf("Hola, me llamo %s %s y tengo %d años.\n", name1, name2, age1)
+
+	// Solo en caso donde el dato no se especifique
+	fmt.Printf("Hola, me llamo %v y tengo %v años \n", name1, age1)
+
+	// Imprimir el tipo de dato que es
+	fmt.Printf("El tipo de la variable name1 es: %T y de la variable age1 es: %T \n", name1, age1)
 }
